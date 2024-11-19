@@ -1,3 +1,4 @@
+import { baseConfig } from '@/config/base'
 import { ImageResponse } from 'next/og'
 
   /**
@@ -12,7 +13,7 @@ import { ImageResponse } from 'next/og'
    */
 export function GET(request: Request) {
   let url = new URL(request.url)
-  let title = url.searchParams.get('title') || 'Next.js Portfolio Starter'
+  let title = url.searchParams.get('title') || baseConfig.title + ' - Blog'
 
   return new ImageResponse(
     (

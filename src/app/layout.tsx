@@ -8,17 +8,14 @@ import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseConfig.baseUrl),
-  title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter'
-  },
-  description: 'This is my portfolio.',
+  title: baseConfig.title,
+  description: baseConfig.description,
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
-    url: baseConfig.baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    title: baseConfig.title,
+    description: baseConfig.description,
+    url: `${baseConfig.baseUrl}/og`,
+    siteName: baseConfig.title,
+    locale: 'zh-CN',
     type: 'website'
   },
   robots: {
