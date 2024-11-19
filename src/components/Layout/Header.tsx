@@ -20,7 +20,7 @@ export default function Header() {
         'bg-background/80 backdrop-saturate-50 backdrop-blur-sm',
         'rounded-full border text-muted-foreground',
         'fixed top-10 left-1/2 -translate-x-1/2 z-50',
-        'w-[90%] md:w-2/5'
+        'w-[90%] md:w-1/3'
       )}
     >
       <div className="text-xl font-bold h-full">

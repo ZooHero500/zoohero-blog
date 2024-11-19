@@ -1,5 +1,15 @@
 import { ImageResponse } from 'next/og'
 
+  /**
+   * This is an API route that generates an open graph image.
+   * The image is a white background with a bold black text in the middle.
+   * The text is the title of the page, which is passed as a query parameter.
+   * If no title is provided, the default title is "Next.js Portfolio Starter".
+   * The image is 1200px wide and 630px tall.
+   *
+   * @param {Request} request - The request object.
+   * @returns {ImageResponse} - The image response.
+   */
 export function GET(request: Request) {
   let url = new URL(request.url)
   let title = url.searchParams.get('title') || 'Next.js Portfolio Starter'
@@ -16,7 +26,7 @@ export function GET(request: Request) {
     ),
     {
       width: 1200,
-      height: 630,
+      height: 630
     }
   )
 }

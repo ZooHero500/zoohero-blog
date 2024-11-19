@@ -8,6 +8,7 @@ interface BaseConfig {
   title: string
   description: string
 
+  cmsUrl?: string 
   socialMedia: socialMedia
 
   theme?: 'dark' | 'light'
@@ -17,7 +18,6 @@ export const baseConfig: BaseConfig = {
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL || '',
   title: 'ZooHero',
   description: 'A blog of a phony perfectionist',
-
 
   socialMedia: {
     twitter: 'https://x.com/zooheroes',

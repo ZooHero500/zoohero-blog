@@ -3,14 +3,13 @@ import { getPostBySlug, getAllPosts } from '@/directus/posts'
 import { Markdown } from '@/components/MarkdownControl/Markdown'
 import { Badge } from '@/components/shadcnui/badge'
 import { formatDate } from '@/lib/utils'
-
 import Link from 'next/link'
 import { baseConfig } from '@/config/base'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -20,7 +19,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: BlogPostPageProps) {
   const { slug } = await params
   const post = await getPostBySlug(slug)
 

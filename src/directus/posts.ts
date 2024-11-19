@@ -1,4 +1,3 @@
-// @ts-ignore
 import { readItems } from '@directus/sdk'
 import { directusClient } from './client'
 import { Post } from '@/types/post'

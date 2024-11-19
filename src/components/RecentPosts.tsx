@@ -5,8 +5,6 @@ import { formatDate } from '@/lib/utils'
 export async function RecentPosts() {
   let blogs = await getRecentPosts()
 
-  console.log('blogs', blogs)
-
   return (
     <div className="space-y-2 mt-3">
       {blogs

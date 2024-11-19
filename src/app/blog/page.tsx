@@ -2,7 +2,7 @@ import { PostsList } from '@/components/Blog/PostsList'
 import { Metadata } from 'next'
 
 interface BlogPageProps {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export const metadata: Metadata = {
