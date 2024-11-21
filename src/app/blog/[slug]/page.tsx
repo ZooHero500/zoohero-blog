@@ -5,6 +5,7 @@ import { Badge } from '@/components/shadcnui/badge'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
 import { baseConfig } from '@/config/base'
+import { Comments } from '@/components/Comments'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -91,6 +92,7 @@ export default async function Blog({ params }: BlogPostPageProps) {
       <div className="mt-8">
         <Markdown content={post.content || ''} />
       </div>
+      <Comments />
       {post.categories && post.categories.length > 0 && (
         <div className="mt-8 flex flex-wrap gap-2">
           {post.categories.map((category: string) => (
