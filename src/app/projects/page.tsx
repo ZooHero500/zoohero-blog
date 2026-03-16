@@ -1,4 +1,4 @@
-import { getProjects } from '@/directus/projects'
+import { getProjects } from '@/lib/content'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/shadcnui/button'
@@ -16,8 +16,6 @@ import {
   TooltipTrigger
 } from '@/components/shadcnui/tooltip'
 import { Separator } from '@/components/shadcnui/separator'
-
-export const revalidate = 3600
 
 async function ProjectsPage() {
   const projects = await getProjects()
@@ -40,7 +38,7 @@ async function ProjectsPage() {
             <CardHeader className="p-3">
               <div className="relative aspect-[16/9] rounded-md overflow-hidden">
                 <Image
-                  src={`/api/image?id=${project.cover}`}
+                  src={project.cover}
                   alt={project.title}
                   fill
                   className="object-cover"

@@ -1,5 +1,5 @@
 import { baseConfig } from '@/config/base'
-import { getAllPosts } from '@/directus/posts'
+import { getAllPosts } from '@/lib/content'
 
 const baseUrl = baseConfig.baseUrl
 

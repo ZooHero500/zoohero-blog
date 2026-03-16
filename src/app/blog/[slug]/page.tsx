@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { getPostBySlug, getAllPosts } from '@/directus/posts'
+import { getPostBySlug, getAllPosts } from '@/lib/content'
 import { Markdown } from '@/components/MarkdownControl/Markdown'
 import { Badge } from '@/components/shadcnui/badge'
 import { formatDate } from '@/lib/utils'

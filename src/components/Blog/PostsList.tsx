@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Badge } from '@/components/shadcnui/badge'
 import { formatDate } from '@/lib/utils'
 
-import { getPosts, getPostByCategory } from '@/directus/posts'
+import { getPosts, getPostByCategory } from '@/lib/content'
 
 import {
   Pagination,
@@ -92,7 +92,7 @@ export async function PostsList({ page = 1, category }: BlogPostsProps) {
                 href={
                   page > 1
                     ? category
-                      ? `/blog/${category}?page=${page - 1}`
+                      ? `/blog/category/${category}?page=${page - 1}`
                       : `/blog?page=${page - 1}`
                     : undefined
                 }
@@ -114,7 +114,7 @@ export async function PostsList({ page = 1, category }: BlogPostsProps) {
                     <PaginationLink
                       href={
                         category
-                          ? `/blog/${category}?page=${pageNumber}`
+                          ? `/blog/category/${category}?page=${pageNumber}`
                           : `/blog?page=${pageNumber}`
                       }
                       isActive={isCurrentPage}
@@ -141,7 +141,7 @@ export async function PostsList({ page = 1, category }: BlogPostsProps) {
                 href={
                   page < totalPages
                     ? category
-                      ? `/blog/${category}?page=${page + 1}`
+                      ? `/blog/category/${category}?page=${page + 1}`
                       : `/blog?page=${page + 1}`
                     : undefined
                 }

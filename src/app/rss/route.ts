@@ -1,5 +1,5 @@
 import { baseConfig } from '@/config/base'
-import { getPosts } from '@/directus/posts'
+import { getPosts } from '@/lib/content'
 
 export async function GET() {
   const { posts } = await getPosts(1, 50) // 获取最新的50篇文章用于RSS

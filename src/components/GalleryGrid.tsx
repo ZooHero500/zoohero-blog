@@ -20,12 +20,12 @@ export function GalleryGrid({ images }: GalleryGridProps) {
             key={image.id}
             className="relative aspect-[3/2] group cursor-zoom-in"
             onClick={() => {
-              const imageUrl = `/api/image?id=${image.image}`
+              const imageUrl = image.image
               setSelectedImage(imageUrl)
             }}
           >
             <Image
-              src={`/api/image?id=${image.image}`}
+              src={image.image}
               alt={image.title || ''}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-101"

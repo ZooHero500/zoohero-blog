@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getRecentPosts } from '@/directus/posts'
+import { getRecentPosts } from '@/lib/content'
 import { formatDate } from '@/lib/utils'
 
 export async function RecentPosts() {

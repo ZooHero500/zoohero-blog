@@ -1,8 +1,6 @@
-import { getGallery } from '@/directus/gallery'
+import { getGallery } from '@/lib/content'
 import { Separator } from '@/components/shadcnui/separator'
 import { GalleryGrid } from '@/components/GalleryGrid'
-
-export const revalidate = 3600
 
 export default async function GalleryPage() {
   const gallery = await getGallery()
