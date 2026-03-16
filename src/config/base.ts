@@ -7,8 +7,6 @@ interface BaseConfig {
   baseUrl: string
   title: string
   description: string
-
-  cmsUrl?: string 
   socialMedia: socialMedia
 
   theme?: 'dark' | 'light'

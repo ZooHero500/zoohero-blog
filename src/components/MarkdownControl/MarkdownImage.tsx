@@ -12,12 +12,6 @@ interface MarkdownImageProps {
 export function MarkdownImage({ src, alt }: MarkdownImageProps) {
   const { openViewer } = useMarkdown()
 
-  // 检查是否是 Directus 资源 URL
-  if (src.includes('directus.zoohero.me/assets/')) {
-    const assetId = src.split('/assets/')[1]
-    src = `/api/image?id=${assetId}`
-  }
-
   return (
     <span className='flex flex-col items-center my-8'>
       <button
