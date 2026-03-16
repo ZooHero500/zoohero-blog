@@ -6,6 +6,5 @@ interface NavbarItem {
 export const navbar: NavbarItem[] = [
   { label: 'Blog', href: '/blog' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Knowledges', href: 'https://knowledgebase.zoohero.me/' }
+  { label: 'Gallery', href: '/gallery' }
 ]
